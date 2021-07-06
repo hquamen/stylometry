@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.2" ID="D262A987-3651-4F6D-B0E5-D74652D2FFA9">
+    <Notes>
+        <Note ID="0" FontSize="12.0" Position="94.5,64.0" Width="25.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>B</String>
+            <ConnectedNoteIDs>4</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="1" FontSize="12.0" Position="217.513412,129.874207" Width="25.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>E</String>
+            <ConnectedNoteIDs>4, 8, 15</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="398.0,276.0" Width="25.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>C</String>
+            <ConnectedNoteIDs>18</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="122.100899,136.427307" Width="25.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>D</String>
+            <ConnectedNoteIDs>4</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="147.71077,90.915085" Width="25.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>S</String>
+            <ConnectedNoteIDs>0-1, 3, 7</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="447.0,276.0" Width="24.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>F</String>
+            <ConnectedNoteIDs>18</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="170.679184,136.553757" Width="26.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>G</String>
+            <ConnectedNoteIDs>4</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="215.776749,181.620773" Width="32.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>H1</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,2</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="462.0,363.0" Width="27.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>I1</String>
+            <ConnectedNoteIDs>12</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,2</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="514.0,363.0" Width="46.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>J + K</String>
+            <ConnectedNoteIDs>12</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,5</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="479.534637,311.0" Width="53.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>WHNP</String>
+            <ConnectedNoteIDs>9, 11, 19</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,4</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="13" FontSize="12.0" Position="638.0,308.0" Width="25.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>A</String>
+            <ConnectedNoteIDs>19</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="277.45813,165.188339" Width="54.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>SBAR </String>
+            <ConnectedNoteIDs>1, 16-17</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,5</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="354.917908,196.516708" Width="25.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>B</String>
+            <ConnectedNoteIDs>15, 18</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,1</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="288.0,212.0" Width="32.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>H2</String>
+            <ConnectedNoteIDs>15</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,2</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="406.769958,225.963257" Width="54.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>SBAR </String>
+            <ConnectedNoteIDs>2, 6, 16, 19</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,5</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="513.409485,264.833496" Width="54.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>SBAR </String>
+            <ConnectedNoteIDs>12-13, 18, 20</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,5</FormatRange>
+            </Formatting>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="560.5,311.0" Width="27.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <Border Weight="2">0.327797 0.346781 1.0</Border>
+            </Appearance>
+            <String>I2</String>
+            <ConnectedNoteIDs>19</ConnectedNoteIDs>
+            <Formatting>
+                <FormatRange Bold="Yes">0,2</FormatRange>
+            </Formatting>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>0-4, 6-9, 11-13, 15-20</AutoFit>
+    <NoteStyles>
+        <Style Name="Bubble (Blue)" ID="45EECFF2-4056-40BD-8800-AECA9D280486" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.668968 0.810267 0.895084</BorderColor>
+            <FillColor>0.743297 0.900297 0.994538</FillColor>
+        </Style>
+        <Style Name="Bubble (Green)" ID="5E87D70F-86BE-4944-9BC5-DD10696CF6F0" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.669411 0.885244 0.567003</BorderColor>
+            <FillColor>0.74379 0.983605 0.630003</FillColor>
+        </Style>
+        <Style Name="Bubble (Pink)" ID="4F2075A0-5A29-4B7A-9E65-616DC7384ABB" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.894548 0.707752 0.715898</BorderColor>
+            <FillColor>0.989117 0.814091 0.999474</FillColor>
+        </Style>
+        <Style Name="Bubble (Red)" ID="C2B1D064-9F57-40F0-8E9F-5D86185F3D5E" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.894548 0.707752 0.715898</BorderColor>
+            <FillColor>0.993942 0.786391 0.795442</FillColor>
+        </Style>
+        <Style Name="Bubble (Yellow)" ID="0016785F-FCF0-4555-BDB7-FAA04C80BB84" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.87775 0.828268 0.562122</BorderColor>
+            <FillColor>0.975278 0.920298 0.62458</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="0F9AB052-8799-4BC5-9230-A0D6CBB637D9" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>0.985948 0.0 0.026951</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="31CC4265-2912-4497-B9C3-84D09094A354" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>1.0 1.0 1.0</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <NoteXPadding>8.0</NoteXPadding>
+    </UISettings>
+    <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>
