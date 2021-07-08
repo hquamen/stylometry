@@ -1,29 +1,33 @@
-# Finding depictive adjectives in Paradise Lost
-#	MORE SOPHISTICATED VERSION
+############################################################
 #
-#	the pattern is "verb [not infinitive] + JJ* + [^Noun]"
+# Finding simple ablative absolutes in Paradise Lost
+#	Dead simple version.
 #
-#	often with:
-#		when, as, after, since, because, although
-#		by, with, from, than, on, in, at
+#	The John Hale ablative (PL 7.142) is ", us dispossessed,"
 #
-
-#	IN PROGRESS --  JUST BARELY STARTED
-
-
-
-
+#	So the simple pattern is
+#		[PUNCT] + [objective case NOUN|PRONOUN] + [VERB PP] + [PUNCT]
+#
+#	This is a copy-n-paste modify from the ablative_FSM code.
+############################################################
 
 import os
-import re  # not really used right now.
+import re
 import string
 
-pl_directory = '/Users/hquamen/Documents/Literary_Style_Project/Milton_Style_article/texts/milton/paradise_lost_POS/'
-# pl_directory = '/Users/hquamen/Documents/Literary_Style_Project/Milton_Style_article/texts/milton/areopagitica/'
+# point to the directory where the chosen texts are:
+text_directory = '/Users/hquamen/Documents/Literary_Style_Project/Milton_Style_article/texts/milton/paradise_lost_POS/'
+# text_directory = '/Users/hquamen/Documents/Literary_Style_Project/Milton_Style_article/texts/milton/areopagitica/'
 
-# The terms 'perfect sentence' and 'imperfect sentence'
-# come from Ben Jonson's _English Grammar_ (1648).
-# See pp. 74-77.
+############################################################
+#
+# Jonson Sentences
+#	The terms 'perfect sentence' and 'imperfect sentence'
+#	come from Ben Jonson's _English Grammar_ (1648).
+#	See pp. 74-77.
+#
+############################################################
+
 perfect_pauses = ['._.', ':_:', '?_?', '!_!']
 imperfect_pauses = [';_;', ',_,']
 all_pauses = perfect_pauses + imperfect_pauses
@@ -35,11 +39,10 @@ VERBS = ["JJ", "JJR", "JJT", "JK", "VH0", "VHD", "VHN", "VVD", "VVG", "VVN", "VV
 PUNCT = [".", ',', ':', ';', '!', '?']
 
 def is_ablative(tokens):
-	# looking for a four-unit sequence of tokens:
-	#	punct + [pronoun] + [verb] + punct
+	"""Simply looking for a four-unit sequence of 'proper' tokens:
+	punct + [pronoun] + [verb] + punct"""
+
 	token_count = len(tokens)
-	# print("{} tokens:".format(token_count))
-	# print(tokens)
 	if token_count < 4:
 		return False
 
@@ -59,6 +62,7 @@ def is_ablative(tokens):
 
 
 def jonson_split(tokens):
+	"""Split sequences of tokens into 'Jonsonian' sentences."""
 	sentences = []
 	current_sentence = []
 	for token in tokens:
@@ -76,22 +80,25 @@ def jonson_split(tokens):
 	return sentences
 
 def tokenize(orig_text):
+	"""Clean up text and return tokens (includes punctuation tokens)"""
 	text = orig_text.replace('\n', ' ')
 	text = MULT_SPACE.sub(' ', text).strip()
 	tokens = text.split()
 	return [t.strip() for t in tokens if len(t.strip()) > 0]
 
 def get_sentence(tokens):
+	"""Return a slightly cleaner sentence w/o POS tags."""
 	words = [t.split("_")[0] for t in tokens]
 	return " ".join(words)
 
-pl_texts = [f for f in os.listdir(pl_directory) if f.endswith('.txt')]
-pl_texts.sort()
-for book_file in pl_texts:
+# read texts
+texts = [f for f in os.listdir(text_directory) if f.endswith('.txt')]
+texts.sort()
+for book_file in texts:
 
 	print("\n---------- Book {}\n".format(book_file))
 	
-	with open(pl_directory + book_file) as f:
+	with open(text_directory + book_file) as f:
 		text = f.read()
 
 	tokens = tokenize(text)
@@ -104,6 +111,7 @@ for book_file in pl_texts:
 			print(get_sentence(sentence))
 			print()
 
+# TEST: if this one returns false, we're not doing it right:
 # text = "Deity_NN1 supreme_JJ ,_, us_PPIO2 dispossessed_VVD ,_,"
 # tokens = tokenize(text)
 # is_ablative(tokens)
