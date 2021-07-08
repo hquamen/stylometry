@@ -1,7 +1,18 @@
-# script to verify correct capitalization.
+#########################################################
+#
+#	Harvey Quamen
+#	University of Alberta
+#
+# A script to verify correct capitalization.
 # In Milton, this is important because if he uses
 # a capital letter after ? then it's a new sentence;
 # if lowercase after ? then it's the same sentence.
+#
+# This script compares a directory of modern spelling texts
+# versus a directory of 17th-century spelling texts. If the
+# two disagree, the script says so.
+#
+#########################################################
 
 import os
 import re
@@ -9,6 +20,10 @@ import re
 BLANK = re.compile(r'^\s*$')
 COMMENT = re.compile(r'^\s*#')
 
+#
+#	I'm reconciling two texts: one is the modern spelling and one is the
+#	17th century spelling from Richard Cunningham's project.
+#
 MILTON_DIR = '/Users/hquamen/Documents/Literary_Style_Project/Milton_Style_article/texts/punctuation/rdc/'
 MILTON_PREFIX = 'rdc_PL_'
 MODERN_DIR = '/Users/hquamen/Documents/Literary_Style_Project/Milton_Style_article/texts/punctuation/hq/'
