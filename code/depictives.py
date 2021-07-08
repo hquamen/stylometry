@@ -1,4 +1,8 @@
 #############################################################
+# 
+# Harvey Quamen
+# University of Alberta
+#
 # Finding depictive adjectives in Paradise Lost
 #
 #	the pattern is "verb [not infinitive] + JJ* + [^Noun]"

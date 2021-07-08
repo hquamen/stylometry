@@ -1,5 +1,8 @@
 ############################################################
 #
+# Harvey Quamen
+# University of Alberta
+#
 # Finding simple ablative absolutes in Paradise Lost
 #	Dead simple version.
 #
