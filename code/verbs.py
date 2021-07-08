@@ -1,5 +1,9 @@
-# Verb locator
 ##############################################################
+#
+# Harvey Quamen
+# University of Alberta
+#
+# Verb locator
 #
 #	This code looks through a directory of POS marked files
 #	and reads each document, skipping lines with '#' and blank lines.
@@ -10,16 +14,19 @@
 #	NEED:
 #		word count w/o punctuation (for the per_mille scale)
 #		sentence length w/o punctuation (for per_cent scale)
-
-#	TO DO:
-#	make sure this works for both a document and a corpus
-#	-- Milton doesn't always split a sentence on '!' either. Check caps.
 #
 ##############################################################
 
 import os
 import re
 import collections
+# haha! I didn't even use the CSV library. What was I thinking?
+
+#############################
+#
+#	REGEX collection
+#
+#############################
 
 BLANK = re.compile(r'^\s*$')
 COMMENT = re.compile(r'^\s*#')
@@ -32,7 +39,11 @@ NOT_PUNCTUATION = re.compile(r'[A-Za-z]')
 ETC = re.compile(r'&c\.;')
 et_cetera = 'et_RR21 cetera_RR22 ;_;'
 
+#############################
+#
 #	GLOBALS
+#
+#############################
 
 BIN_SIZE = 5	# percentage size of the bin; 5% == 20 bins
 
@@ -42,18 +53,31 @@ STATUS_REPORT = False
 HEADER = ['location','frequency','text']
 TEXT = 'Prose'
 
+# Modify the sentence length to keep sentences longer than this
+#	and omit sentences shorter than this.
 APPROVED_SENTENCE_LENGTH = 10
+
+# As per reviewer, sentences ending with infinitives aren't periodic;
+#	so just skip infinitives. Don't count them.
 SKIP_POS_ENDING_WITH = "I"		# These POS are all infinitives in CLAWS
 
+# Looking currently for verbs; could modify this later to look for
+#	placement of nouns, etc.
 POS_TAG_TO_FIND = "V"
 
+# We score a "hit" on a periodic sentence if the POS occurs at
+#	this percentile location or greater
 MINIMUM_WINDOW = 98
 
+# Have Python help us count stuff
 pos_counter = collections.Counter()
 
 ##############################################################
 #
 # 	PATHS
+#
+#	Point to the directory of the texts you'd like to analyze;
+#		I did this so many times, I just kept adding paths...
 #
 ##############################################################
 
@@ -142,10 +166,12 @@ def parse_sentences(original_tokens):
 
 
 #
-#	HISTOGRAM
+#	HISTOGRAM CREATION
+#		I create a CSV file and use `ggplot` in R to graph.
 #
 
 def make_histogram(locations):
+	"""One function wrapper that calls necessary sub-functions."""
 	bins = bin_percentages(locations)
 	return per_mille(bins)
 
