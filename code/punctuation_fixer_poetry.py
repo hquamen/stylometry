@@ -3,7 +3,8 @@
 # Harvey Quamen
 # University of Alberta
 #
-# auto-change punctuation. This reduced 3700+ lines down
+# Auto-change punctuation: compare 20c text and 17c text, keep
+# 17c punctuation. This reduced 3700+ lines down
 # to 14 that needed to be tweaked by hand.
 # This still has problems with hyphenated lines, but the
 # problem might stem from the 20c edition of Paradise Lost,
@@ -62,17 +63,20 @@ OUTPUT_PREFIX = 'hq_PL_'
 ALPHABET = string.ascii_lowercase + string.ascii_uppercase + "'"
 
 def is_word(word):
+	"""A custom isalnum() function: is in alphabetical plus apostrophes?"""
 	for letter in word:
 		if letter not in ALPHABET:
 			return False
 	return True
 
 def fix_spellings(line):
+	"""Correct problematic spellings, whether 17c or 20c"""
 	for wrong, right in SPELLING.items():
 		line = line.replace(wrong, right)
 	return line
 
 def compose(tokens):
+	"""Fix odd spacing around punctuation tokens."""
 	new_string = ' '.join(tokens)
 	for bad, good in REPLACEMENTS.items():
 		new_string = new_string.replace(bad, good)
