@@ -1,0 +1,32 @@
+Harvey Quamen
+University of Alberta
+
+A few notes about creating the images in R:
+
+
+Bar Graph in R
+
+> library(ggplot2)
+> d <- read.csv( file_path )
+
+> ggplot(d, aes(factor(Book), Percentage)) + geom_col(fill="blue", color="black", width=0.75) + xlab("Book") + ggtitle("Periodic Sentences by Book in Paradise Lost") + ylim(0, 35)
+
+
+Line Graph (Periodic Verbs, e.g.)
+
+> library(ggplot2)
+> d <- read.csv('pl_for_real.csv')
+
+> g <- ggplot(d, aes(location, frequency, color=text)) + xlab('Verb Location in Sentence (%)') + ylab('Frequency Count per 1000 Words') + ggtitle("Paradise Lost vs. Areopagitica") + geom_line()
+
+.... if you want a linear regression line, add this:
+
++ stat_smooth(method=lm, colour="blue")
+
+
+Slope of linear regression line:
+> emo.lm = lm(Frequency ~ Percent, data=d)
+
+
+Call:
+lm(formula = Frequency ~ Percent, data = d)
