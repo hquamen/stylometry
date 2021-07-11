@@ -1,4 +1,13 @@
-# compare punctuation in lines across two docs
+######################################################
+#
+# Harvey Quamen
+# University of Albeta
+#
+# Compare punctuation in lines across two docs; although
+# there's a THRESHOLD here it's not used. The two lines
+# fail if there's not an exact match of punctuation tokens.
+#
+######################################################
 
 import os
 import re
@@ -19,6 +28,7 @@ first_dir = 'rdc/'
 second_dir = 'hq/'
 
 def calculate_ratio(one, two):
+	"""Calculate the raw similarity of two sets; not Jaccard distance, as I thought."""
 	a = [letter for letter in set(one) if letter in string.ascii_lowercase]
 	b = [letter for letter in set(two) if letter in string.ascii_lowercase]
 	return len(a) / len(b)
