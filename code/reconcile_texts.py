@@ -1,10 +1,19 @@
-# This script scans two texts and compares
-# them word by word. It also:
+##########################################################
+#
+# Harvey Quamen
+# University of Alberta
+#
+# This script scans two texts (one old spelling, one new)
+# and compares them word by word. In effect, it:
 #	1. Keeps new spelling
 #	2. Keeps old punctuation
 #	3. Tries to reconcile the lists when the tokens mismatch.
+#		(There are six possible cases, as seen below)
+#	4. Flags lines when the Jaccord Score < THRESHOLD
+#	5. Stops after LIMIT number of poor Jaccard scores.
+#		(Hand reconciliation necessary at that point)
 #
-
+##########################################################
 
 import re
 import string
@@ -235,13 +244,4 @@ while old_word_num < len(old) and mod_word_num < len(modern):
 print("Loop done.\n")
 print(buildlines(reconciled_tokens))
 
-
-
-"""# check to see if we have anything left over:
-if len(modern) > word_num:
-	# probably left-over punctuation; skip it?
-	# reconciled_tokens.extend(modern)
-	pass
-elif len(old) > 0:
-	reconciled_tokens.extend(old)"""
 
